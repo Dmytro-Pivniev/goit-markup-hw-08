@@ -910,9 +910,20 @@ img {
   margin-bottom: 0;
 }
 
+.filters {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .filters {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .filter-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -920,8 +931,19 @@ img {
   color: var(--primary-text-color);
   margin-bottom: 50px;
 }
+@media screen and (min-width: 768px) {
+  .filter-list {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    justify-content: center;
+  }
+}
 .filter-list__btn {
   margin-left: 8px;
+  margin-bottom: 15px;
 }
 .filter-list__button.primary {
   max-width: 73px;
@@ -948,7 +970,7 @@ img {
   background: var(--section-background-color);
   border-radius: 4px;
   border: none;
-  ransition: color 250ms, background-color 250ms;
+  transition: color 250ms, background-color 250ms;
 }
 .filter-list__button:hover, .filter-list__button:focus,
 .filter-title:hover,
@@ -959,16 +981,37 @@ img {
 
 .progect-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  flex-direction: column;
+  margin-left: -30px;
+}
+@media screen and (min-width: 768px) {
+  .progect-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .progect-list {
+    margin-bottom: -30px;
+  }
 }
 
 .progect-list__img-item {
   background: var(--primary-white-color);
-  margin-right: 30px;
   margin-bottom: 30px;
+  margin-left: 30px;
+}
+@media screen and (min-width: 768px) {
+  .progect-list__img-item {
+    width: calc(50% - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .progect-list__img-item {
+    width: calc(33.3333333333% - 30px);
+  }
 }
 
 .progect-list__link {
@@ -1009,7 +1052,7 @@ img {
 }
 
 .progect-card {
-  padding: 20px 24px 20px 24px;
+  padding: 20px 10px 20px 10px;
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
