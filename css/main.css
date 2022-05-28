@@ -488,27 +488,56 @@ img {
   align-items: center;
 }
 
+.hero .container {
+  max-width: 100%;
+  padding: 0;
+}
+
 .hero {
   background-color: var(--secondary-background-color);
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg/hero-bg.jpg);
+  padding: 118px 60px 238px 60px;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-mobile-studio/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 1600px;
   margin: 0 auto;
 }
+@media screen and (min-width: 480px) {
+  .hero {
+    padding: 200px 60px 238px 60px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-mobile-studio/hero-mobile.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 118px 204px 118px 204px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-tablet-studio/hero-tablet.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 200px 452px 200px 452px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg/hero-bg.jpg);
+  }
+}
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-white-color);
   margin: 0 auto;
   margin-bottom: 30px;
-  max-width: 696px;
+  max-width: 360px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
 }
 .hero__button.primary {
   font-family: "Roboto";
@@ -543,6 +572,7 @@ img {
 }
 
 .peculiarities-image-list {
+  display: flex;
   margin-bottom: 30px;
 }
 .peculiarities-image-list__item {
@@ -563,6 +593,9 @@ img {
   align-items: center;
 }
 
+.peculiarities-list {
+  display: flex;
+}
 .peculiarities-list__items:not(:last-child) {
   margin-right: 30px;
 }
